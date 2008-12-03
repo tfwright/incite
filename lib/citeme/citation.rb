@@ -1,4 +1,4 @@
-module Bibliographer
+module CiteMe
   class Citation
     attr_accessor :title, :authors, :publisher, :city, :year, :pages
     

@@ -1,4 +1,4 @@
-module Bibliographer
+module CiteMe
   class Note < Bibliographer::Citation
     
     def to_html
