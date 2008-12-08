@@ -14,7 +14,7 @@ module CiteMe
         ordered_authors = authors.sort_by { |a| a.split(" ").last }
         case ordered_authors.size
         when 2
-          ordered_authors.join("and")
+          ordered_authors.join(" and ")
         when 3..5
           ordered_authors.first + "et al."
         else
