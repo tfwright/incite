@@ -1,5 +1,5 @@
 module CiteMe
-  class Reference < Bibliographer::Citation
+  class Reference < CiteMe::Citation
     
     def to_html
       "#{formatted_authors}. #{year}. <em>#{title}</em>. #{city}: #{publisher}."
