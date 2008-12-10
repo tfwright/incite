@@ -16,7 +16,7 @@ module CiteMe
         when 2
           ordered_authors.join(" and ")
         when 3..5
-          ordered_authors.first + "et al."
+          ordered_authors.first + " et al."
         else
           ordered_authors.first
         end
