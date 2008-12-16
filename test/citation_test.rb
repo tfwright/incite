@@ -2,6 +2,13 @@ require(File.join(File.dirname(__FILE__), 'test_helper'))
 
 unit_tests do
   
+  test "initializes with attr hash" do
+    assert_nothing_raised do
+      citation = CiteMe::Citation.new(:authors => ["Test Author"])
+      assert_equal ["Test Author"], citation.authors
+    end
+  end
+  
   test "formats two authors sorting alphabetically joined with 'and'" do
     citation = CiteMe::Citation.new(:authors => ["Han Solo", "James Kirk"])
     CiteMe::Citation.publicize_methods do 
