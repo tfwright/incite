@@ -10,6 +10,10 @@ module CiteMe
     
     private
     
+      def format_ranges
+        pages.map { |p| p.is_a?(Range) ? "#{p.first}-#{p.last}" : p }
+      end
+    
       def formatted_authors
         ordered_authors = authors.sort_by { |a| a.split(" ").last }
         case ordered_authors.size

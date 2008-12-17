@@ -8,11 +8,4 @@ unit_tests do
     assert_equal "(James Kirk and Han Solo. 1983, 45-49, 51)", inline.to_html
   end
   
-  test "replaces all ranges in pages attr array with formatted string" do
-    inline = CiteMe::Inline.new(:pages => [(45..49), 51])
-    CiteMe::Inline.publicize_methods do 
-      assert_equal ["45-49", 51], inline.format_ranges
-    end
-  end
-  
 end

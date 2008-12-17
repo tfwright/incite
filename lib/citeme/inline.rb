@@ -5,11 +5,5 @@ module CiteMe
       "(#{formatted_authors}. #{year}, #{format_ranges.join(", ")})"
     end
     
-    private
-    
-      def format_ranges
-        pages.map { |p| p.is_a?(Range) ? "#{p.first}-#{p.last}" : p }
-      end
-    
   end
 end
