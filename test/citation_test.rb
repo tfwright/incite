@@ -30,13 +30,6 @@ unit_tests do
     end
   end
   
-  test "replaces all ranges in pages attr array with formatted string" do
-    citation = CiteMe::Citation.new(:pages => [(45..49), 51])
-    CiteMe::Citation.publicize_methods do 
-      assert_equal ["45-49", 51], citation.format_ranges
-    end
-  end
-  
   test "formats array of pages for display in html" do
     citation = CiteMe::Citation.new(:pages => [(45..49), 51])
     CiteMe::Citation.publicize_methods do 
