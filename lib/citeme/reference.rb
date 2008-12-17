@@ -4,5 +4,6 @@ module CiteMe
     def to_html
       "#{formatted_authors}. #{year}. <em>#{title}</em>. #{city}: #{publisher}."
     end
+    
   end
 end
