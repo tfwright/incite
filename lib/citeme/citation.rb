@@ -10,6 +10,10 @@ module CiteMe
     
     private
     
+      def formatted_pages
+        format_ranges.join(", ")
+      end
+    
       def format_ranges
         pages.map { |p| p.is_a?(Range) ? "#{p.first}-#{p.last}" : p }
       end

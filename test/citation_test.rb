@@ -37,4 +37,11 @@ unit_tests do
     end
   end
   
+  test "formats array of pages for display in html" do
+    citation = CiteMe::Citation.new(:pages => [(45..49), 51])
+    CiteMe::Citation.publicize_methods do 
+      assert_equal "45-49, 51", citation.formatted_pages
+    end
+  end
+  
 end
