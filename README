@@ -32,7 +32,8 @@ OK.  That's a little better.  It's even sorted them for you!  Unfortunately...it
 
 === Other future plans
 
-* Integration with various bibliographies (Google books, Amazon)
+* Integration with various bibliographies (Google Books, Amazon, &c?)
 * Citation text
 * Source types
 * Minimal validations of metadata
+* Different type of formats (to_s, to_rtf)
