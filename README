@@ -26,11 +26,13 @@ So lets add some metadata and try again. When we're talking about citations, pro
 irb> source.authors = ["Some Guy", "Smart Gal"]
 => ["Some Guy", "Smart Gal"]
 irb> source.citation(:Note)
-=> => "Smart Gal and Some Guy, <em></em> (: , ), ."
+=> "Smart Gal and Some Guy, <em></em> (: , ), ."
 
 OK.  That's a little better.  It's even sorted them for you!  Unfortunately...it also spat out a bunch of garbage relating to other unavailable data.  In the future the plan is for CiteMe to be intelligent about how to format 'partial' sources.
 
-=== Other plans
+=== Other future plans
 
 * Integration with various bibliographies (Google books, Amazon)
 * Citation text
+* Source types
+* Minimal validations of metadata
