@@ -1,10 +1,9 @@
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
-$: << File.join(File.dirname(__FILE__), '..', 'vendor', 'dust-0.1.6', 'lib')
-$: << File.join(File.dirname(__FILE__))
+Dir[File.join(File.dirname(__FILE__), '..', 'vendor', '**', 'lib')].each do |path|
+  $: << path
+end
 
 require 'citeme'
-require 'rubygems'
-require 'test/unit'
 require 'dust'
 
 # For testing private methods
