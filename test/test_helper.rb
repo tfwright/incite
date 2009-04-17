@@ -1,5 +1,5 @@
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
-$: << File.join(File.dirname(__FILE__), '..', 'vendor')
+$: << File.join(File.dirname(__FILE__), '..', 'vendor', 'dust-0.1.6', 'lib')
 $: << File.join(File.dirname(__FILE__))
 
 require 'citeme'
