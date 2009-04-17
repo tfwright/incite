@@ -1,3 +1,5 @@
+$: << File.join(File.dirname(__FILE__))
+
 require 'citeme/citation'
 require 'citeme/entry'
 require 'citeme/inline'
