@@ -2,7 +2,7 @@ module CiteMe
   class Note < CiteMe::Citation
     
     def to_html
-      "#{formatted_authors}, <em>#{title}</em> (#{city}: #{publisher}, #{year}), #{formatted_pages}."
+      "#{formatted_authors}, <em>#{source.title}</em> (#{source.city}: #{source.publisher}, #{source.year}), #{formatted_pages}."
     end
          
   end

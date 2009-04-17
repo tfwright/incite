@@ -2,7 +2,7 @@ module CiteMe
   class Inline < CiteMe::Citation
     
     def to_html
-      "(#{formatted_authors}. #{year}, #{formatted_pages})"
+      "(#{formatted_authors}. #{source.year}, #{formatted_pages})"
     end
     
   end

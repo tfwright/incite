@@ -1,21 +1,19 @@
 module CiteMe
   class Citation
-    attr_accessor :title, :authors, :publisher, :city, :year, :pages
+    attr_accessor :source
     
-    def initialize(attrs)
-      attrs.each do |attr, value|
-        self.send("#{attr}=", value)
-      end
+    def initialize(source)
+      self.source = source
     end
     
     private
     
       def formatted_pages
-        pages.map { |p| p.is_a?(Range) ? "#{p.first}-#{p.last}" : p }.join(", ")
+        source.pages.map { |p| p.is_a?(Range) ? "#{p.first}-#{p.last}" : p }.join(", ")
       end
     
       def formatted_authors
-        ordered_authors = authors.sort_by { |a| a.split(" ").last }
+        ordered_authors = source.authors.sort_by { |a| a.split(" ").last }
         case ordered_authors.size
         when 2
           ordered_authors.join(" and ")

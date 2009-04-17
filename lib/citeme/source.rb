@@ -1,15 +1,17 @@
 module CiteMe
   class Source
-    attr_accessor :metadata
+    attr_accessor :title, :authors, :publisher, :city, :year, :pages
     
-    def initialize(attrs)
+    def initialize(attrs={})
       attrs.each do |attr, value|
         self.send("#{attr}=", value)
       end
+      self.pages ||= []
+      self.authors ||= []
     end
     
     def citation(type)
-      citation = CiteMe.const_get(type.to_s).new(metadata).to_html
+      citation = CiteMe.const_get(type.to_s).new(self).to_html
     end
     
   end
