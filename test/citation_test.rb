@@ -12,7 +12,7 @@ unit_tests do
     source = CiteMe::Source.new(:authors => ["Han Solo", "James Kirk"])
     citation = CiteMe::Citation.new(source)
     CiteMe::Citation.publicize_methods do 
-      assert_equal "James Kirk and Han Solo", citation.formatted_authors
+      assert_equal "James Kirk and Han Solo", citation.formatted_contributors(:authors)
     end
   end
   
@@ -20,7 +20,7 @@ unit_tests do
     source = CiteMe::Source.new(:authors => ["Han Solo", "James Kirk", "Cat Stevens"])
     citation = CiteMe::Citation.new(source)
     CiteMe::Citation.publicize_methods do 
-      assert_equal "James Kirk et al.", citation.formatted_authors
+      assert_equal "James Kirk et al.", citation.formatted_contributors(:authors)
     end
   end
   
@@ -28,7 +28,7 @@ unit_tests do
     source = CiteMe::Source.new(:authors => ["Han Solo"])
     citation = CiteMe::Citation.new(source)
     CiteMe::Citation.publicize_methods do 
-    assert_equal "Han Solo", citation.formatted_authors
+    assert_equal "Han Solo", citation.formatted_contributors(:authors)
     end
   end
   

@@ -1,6 +1,8 @@
 module CiteMe
   class Source
-    attr_accessor :title, :authors, :publisher, :city, :year, :pages
+    
+    attr_accessor :title, :authors, :publisher, :city, :year, 
+      :pages, :editors, :edition, :volume, :translators
     
     def initialize(attrs={})
       attrs.each do |attr, value|
@@ -8,6 +10,8 @@ module CiteMe
       end
       self.pages ||= []
       self.authors ||= []
+      self.editors ||= []
+      self.translators ||= []
     end
     
     def citation(type)
