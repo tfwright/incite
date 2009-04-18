@@ -28,7 +28,7 @@ irb> source.authors = ["Some Guy", "Smart Gal"]
 irb> source.citation(:Note)
 => "Smart Gal and Some Guy, <em></em> (: , ), ."
 
-OK.  That's a little better.  It's even sorted them for you!  Unfortunately...it also spat out a bunch of garbage relating to other unavailable data.  In the future the plan is for CiteMe to be intelligent about how to format 'partial' sources.
+OK.  That's a little better.  It's even sorted them for you!  Unfortunately...it also spat out a bunch of garbage relating to other unavailable data.  In the future the plan is for CiteMe to be intelligent about how to format 'partial' sources (this has begun to be implemented, but needs to be a lot more robust).
 
 === Other future plans
 
