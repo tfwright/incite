@@ -11,7 +11,7 @@ module CiteMe
     end
     
     def citation(type)
-      citation = CiteMe.const_get(type.to_s).new(self).to_html
+      citation = CiteMe.const_get(type.to_s.capitalize).new(self).to_html
     end
     
   end
