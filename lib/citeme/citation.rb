@@ -4,6 +4,7 @@ module CiteMe
     
     def initialize(source)
       self.source = source
+      validate_required_attributes!
     end
     
     private
@@ -22,7 +23,15 @@ module CiteMe
         else
           ordered_contributors.first
         end.to_s
-      end 
+      end
+      
+      def validate_required_attributes!
+        raise ArgumentError, "Source lacks attributes required to construct citation" unless valid_source?
+      end
+      
+      def valid_source?
+        true
+      end
         
   end
 

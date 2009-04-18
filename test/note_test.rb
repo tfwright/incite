@@ -17,4 +17,11 @@ unit_tests do
     assert_equal "James Kirk and Han Solo, <em>Memoirs from Space</em> (Random House, 1983), 45-49, 51.", note.to_html
   end
   
+  test "raises error if source lacks required attributes" do
+    source = CiteMe::Source.new
+    assert_raises ArgumentError do
+      CiteMe::Note.new(source)
+    end
+  end
+  
 end

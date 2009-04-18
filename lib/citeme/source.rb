@@ -18,5 +18,12 @@ module CiteMe
       citation = CiteMe.const_get(type.to_s.capitalize).new(self).to_html
     end
     
+    def has_attributes?(attrs)
+      !attrs.map do |attr|
+        value = send(attr)
+        (value.is_a?(Array) && value.any?) || (!value.is_a?(Array) && !value.nil?)
+      end.include?(false)
+    end
+    
   end
 end

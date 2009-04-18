@@ -22,7 +22,21 @@ unit_tests do
   test "correctly interprets lowercase citation types" do
     source = CiteMe::Source.new
     assert_nothing_raised do
-      source.citation(:note)
+      source.citation(:entry)
+    end
+  end
+  
+  test "returns true if every element in array is an array with at least one element or not nil" do
+    source = CiteMe::Source.new(:authors => ["Test Author"], :title => "Test Title")
+    CiteMe::Source.publicize_methods do 
+      assert source.has_attributes?([:authors, :title])
+    end
+  end
+  
+  test "returns false if every element in array is an array with at least one element or not nil" do
+    source = CiteMe::Source.new(:authors => [], :title => "Test Title")
+    CiteMe::Source.publicize_methods do 
+      assert !source.has_attributes?([:authors, :title])
     end
   end
   
