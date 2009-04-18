@@ -40,4 +40,12 @@ unit_tests do
     end
   end
   
+  test "returns an empty string when there are no contributors" do
+    source = CiteMe::Source.new
+    citation = CiteMe::Citation.new(source)
+    CiteMe::Citation.publicize_methods do 
+      assert_equal "", citation.formatted_contributors(:authors)
+    end
+  end
+  
 end

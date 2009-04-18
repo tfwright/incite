@@ -21,7 +21,7 @@ module CiteMe
           ordered_contributors.first + " et al."
         else
           ordered_contributors.first
-        end
+        end.to_s
       end 
         
   end
