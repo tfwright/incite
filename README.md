@@ -23,7 +23,7 @@ irb> source = Incite::Source.new
 Sources don't require any parameters to be created, but obviously you're not going to get a very useful citation:
 
 ```
-irb> source.citation(:Note)
+irb> source.citation(:note)
 => ", <em></em> (: , ), ."
 ```
 
@@ -32,7 +32,7 @@ So lets add some metadata and try again. When we're talking about citations, pro
 ```
 irb> source.authors = ["Some Guy", "Smart Gal"]
 => ["Some Guy", "Smart Gal"]
-irb> source.citation(:Note)
+irb> source.citation(:note)
 => "Smart Gal and Some Guy, <em></em> (: , ), ."
 ```
 
