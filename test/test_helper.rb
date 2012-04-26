@@ -3,7 +3,7 @@ Dir[File.join(File.dirname(__FILE__), '..', 'vendor', '**', 'lib')].each do |pat
   $: << path
 end
 
-require 'citeme'
+require 'incite'
 require 'dust'
 
 # For testing private methods

@@ -1,5 +1,5 @@
-module CiteMe
-  class Note < CiteMe::Citation
+module Incite
+  class Note < Incite::Citation
     
     REQUIRED_ATTRS = %w(authors title publisher year pages)
     

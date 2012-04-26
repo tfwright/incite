@@ -1,4 +1,4 @@
-module CiteMe
+module Incite
   class Source
     
     attr_accessor :title, :authors, :publisher, :city, :year, 
@@ -15,7 +15,7 @@ module CiteMe
     end
     
     def citation(type)
-      citation = CiteMe.const_get(type.to_s.capitalize).new(self).to_html
+      citation = Incite.const_get(type.to_s.capitalize).new(self).to_html
     end
     
     def has_attributes?(attrs)

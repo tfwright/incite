@@ -1,4 +1,4 @@
-module CiteMe
+module Incite
   class Citation
     attr_accessor :source
     
