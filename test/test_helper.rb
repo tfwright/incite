@@ -1,4 +1,4 @@
-$: << File.join(File.dirname(__FILE__), '..', 'lib')
+# Require vendor libs
 Dir[File.join(File.dirname(__FILE__), '..', 'vendor', '**', 'lib')].each do |path|
   $: << path
 end
