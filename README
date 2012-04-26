@@ -1,20 +1,20 @@
 === Overview
 
-CiteMe is an academic citation library that lets you easily define objects for typical academic sources (eg. books, articles) which can be used to output formatted html for a variety of bibliographical formats (eg. Chicago Manual of Style, MLA).  Right now only CMS is supported.
+Incite is an academic citation library that lets you easily define objects for typical academic sources (eg. books, articles) which can be used to output formatted html for a variety of bibliographical formats (eg. Chicago Manual of Style, MLA).  Right now only CMS is supported.
 
-CiteMe is in alpha alpha stage.  It's useless, don't install it.
+incite is in alpha alpha stage.  It's useless, don't install it.
 
 === Usage
 
 * Note: This syntax is very experimental, and will likely--no, definitely--change in a radical way (see above).
 
-irb> require 'lib/citeme'
+irb> require 'lib/incite'
 => true
 
 First you need to instantiate a source you want to cite:
 
-irb> source = CiteMe::Source.new
-=> #<CiteMe::Source:0x8c5f0>
+irb> source = Incite::Source.new
+=> #<Incite::Source:0x8c5f0>
 
 Sources don't require any parameters to be created, but obviously you're not going to get a very useful citation:
 
@@ -28,7 +28,7 @@ irb> source.authors = ["Some Guy", "Smart Gal"]
 irb> source.citation(:Note)
 => "Smart Gal and Some Guy, <em></em> (: , ), ."
 
-OK.  That's a little better.  It's even sorted them for you!  Unfortunately...it also spat out a bunch of garbage relating to other unavailable data.  In the future the plan is for CiteMe to be intelligent about how to format 'partial' sources (this has begun to be implemented, but needs to be a lot more robust).
+OK.  That's a little better.  It's even sorted them for you!  Unfortunately...it also spat out a bunch of garbage relating to other unavailable data.  In the future the plan is for Incite to be intelligent about how to format 'partial' sources (this has begun to be implemented, but needs to be a lot more robust).
 
 === Other future plans
 
