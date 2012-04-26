@@ -16,7 +16,7 @@ unit_tests do
   test "outputs html for a given type of citation" do
     source = Incite::Source.new(:authors => ["Han Solo", "James Kirk"], :publisher => "Random House",
       :city => "New York", :year => 1983, :title => "Memoirs from Space", :pages => [(45..49), 51])
-    assert_equal "James Kirk and Han Solo. <em>Memoirs from Space</em>. New York: Random House, 1983.", source.citation(:Entry)
+    assert_equal "James Kirk and Han Solo. <em>Memoirs from Space</em>. New York: Random House, 1983.", source.citation(:entry)
   end
   
   test "correctly interprets lowercase citation types" do
