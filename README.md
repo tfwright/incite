@@ -2,7 +2,7 @@
 
 Incite is an academic citation library that lets you easily define objects for typical academic sources (eg. books, articles) which can be used to output formatted html for a variety of bibliographical formats (eg. Chicago Manual of Style, MLA).  Right now only CMS is supported.
 
-incite is in alpha alpha stage.  It's useless, don't install it.
+Incite is in alpha alpha stage.  It's useless, don't install it.
 
 # Usage
 
