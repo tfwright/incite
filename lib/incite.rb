@@ -1,8 +1,10 @@
-$: << File.join(File.dirname(__FILE__))
+require "incite/version"
 
 require 'incite/citation'
+require 'incite/source'
 require 'incite/entry'
-require 'incite/inline'
 require 'incite/note'
 require 'incite/reference'
-require 'incite/source'
+
+module Incite
+end
