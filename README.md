@@ -1,4 +1,4 @@
-# Overview [![Incite Build Status][Build Icon]][Build Status]
+Overview [![Incite Build Status][Build Icon]][Build Status]
 
 
 Incite is in alpha alpha stage.  It's useless, don't install it.
