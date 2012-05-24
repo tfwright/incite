@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "incite/version"
 
 Gem::Specification.new do |s|
-  s.name        = "Incite"
+  s.name        = "incite"
   s.version     = Incite::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Thomas Wright"]

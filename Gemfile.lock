@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Incite (0.0.1)
+    incite (0.0.1)
 
 GEM
   remote: http://rubygems.org/
@@ -13,6 +13,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Incite!
   dust
+  incite!
   rake (~> 0.9.2.2)
