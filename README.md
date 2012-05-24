@@ -1,5 +1,7 @@
-Overview [![Incite Build Status][Build Icon]][Build Status]
+# Overview [![Incite Build Status][Build Icon]][Build Status]
 
+[Build Status]: http://travis-ci.org/site5/incite
+[Build Icon]: https://secure.travis-ci.org/site5/incite.png?branch=master
 
 Incite is in alpha alpha stage.  It's useless, don't install it.
 
