@@ -7,6 +7,10 @@ GEM
   remote: http://rubygems.org/
   specs:
     dust (0.1.6)
+    m (1.2.1)
+      method_source (>= 0.6.7)
+      rake (>= 0.9.2.2, < 1.0.0)
+    method_source (0.8)
     rake (0.9.2.2)
 
 PLATFORMS
@@ -15,4 +19,5 @@ PLATFORMS
 DEPENDENCIES
   dust (~> 0.1.6)
   incite!
+  m (~> 1.2)
   rake (~> 0.9.2.2)
