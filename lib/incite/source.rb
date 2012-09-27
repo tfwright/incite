@@ -1,6 +1,5 @@
 module Incite
   class Source
-    REQUIRED_ATTRS = %w(authors title publisher year)
     
     attr_accessor :title, :authors, :publisher, :city, :year, 
       :pages, :editors, :edition, :volume, :translators
@@ -16,7 +15,6 @@ module Incite
     end
     
     def citation(type)
-      validate_required_attributes!
       citation = Incite.const_get(type.to_s.capitalize).new(self).to_html
     end
     
@@ -27,12 +25,5 @@ module Incite
       end.include?(false)
     end
 
-    def valid?
-      has_attributes?(REQUIRED_ATTRS)
-    end
-    
-    def validate_required_attributes!
-      raise ArgumentError, "Source lacks attributes required to construct citation" unless valid?
-    end
   end
 end
