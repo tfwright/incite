@@ -1,17 +1,15 @@
 module Incite
   class Note < Incite::Citation
-    
-    REQUIRED_ATTRS = %w(authors title publisher year pages)
-    
+
     def to_html
       relevant_attributes = %w(authors title translators editors volume edition city publisher year pages)
       relevant_attributes.inject("") do |string, attribute|
         string << format_segment_for(attribute)
       end
     end
-    
+
     private
-    
+
       def format_segment_for(attribute)
         case attribute
         when "authors"
@@ -38,11 +36,7 @@ module Incite
           "#{formatted_pages}."
         end.to_s
       end
-      
-      def valid_source?
-        source.has_attributes?(REQUIRED_ATTRS)
-      end
-    
+
   end
 end
 

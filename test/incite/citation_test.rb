@@ -47,5 +47,5 @@ unit_tests do
       assert_equal "", citation.formatted_contributors(:authors)
     end
   end
-  
+
 end
