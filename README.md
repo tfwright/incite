@@ -15,13 +15,13 @@ gem install incite
 
 # Usage
 
-* Note: This syntax is very experimental, and will likely--no, definitely--change in a radical way (see above).
+* Note: This syntax is very experimental, and will likely--no, definitely--change in a radical way (see overview).
 
 First you need to instantiate a source you want to cite:
 
 ```ruby
 source = Incite::Source.new
-=> #<Incite::Source:0x8c5f0>
+# => #<Incite::Source:0x8c5f0>
 ```
 
 Configure the source with the bibliographical data.  The minimum required attributes are  title, author(s), publisher, and year. 
@@ -37,7 +37,7 @@ Yes, I just made all of that up.  I should have been a writer.  Now you can cite
 
 ```ruby
 source.citation(:entry)
-=> "Sam Dandy. <em>A Brief Flirtation</em>. : Rainbow Unicorn Press, 1985."
+# => "Sam Dandy. <em>A Brief Flirtation</em>. : Rainbow Unicorn Press, 1985."
 ```
 
 If you try to create a citation when this data is missing you'll get an error.
