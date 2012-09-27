@@ -1,11 +1,12 @@
 require "incite/version"
 
-require 'incite/citation'
 require 'incite/source'
-require 'incite/sources/entry'
-require 'incite/sources/note'
-require 'incite/sources/reference'
-require 'incite/sources/inline'
+
+require 'incite/citation'
+require 'incite/formats/entry'
+require 'incite/formats/note'
+require 'incite/formats/reference'
+require 'incite/formats/inline'
 
 module Incite
 end
