@@ -1,6 +1,6 @@
 module Incite
   class Source
-    REQUIRED_ATTRS = %w(authors title publisher year pages)
+    REQUIRED_ATTRS = %w(authors title publisher year)
     
     attr_accessor :title, :authors, :publisher, :city, :year, 
       :pages, :editors, :edition, :volume, :translators
