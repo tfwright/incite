@@ -2,7 +2,6 @@ module Incite
   class Note < Incite::Citation
 
     def to_html
-      validate_source!
       relevant_attributes = %w(authors title translators editors volume edition city publisher year pages)
       relevant_attributes.inject("") do |string, attribute|
         string << format_segment_for(attribute)

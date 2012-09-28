@@ -6,11 +6,6 @@ module Incite
     
     def initialize(source)
       self.source = source
-    end
-
-    protected
-
-    def validate_source!
       raise ArgumentError, "Source lacks attributes required to construct citation" unless source.has_attributes?(REQUIRED_SOURCE_ATTRS)
     end
 
