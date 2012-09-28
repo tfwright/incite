@@ -15,7 +15,7 @@ module Incite
     end
     
     def citation(type)
-      citation = Incite.const_get(type.to_s.capitalize).new(self).to_html
+      citation = Incite.const_get(type.to_s.capitalize).new(self)
     end
     
     def has_attributes?(attrs)

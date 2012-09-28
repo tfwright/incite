@@ -13,10 +13,10 @@ unit_tests do
     end
   end
 
-  test "outputs html for a given type of citation" do
+  test "citation of given type" do
     source = Incite::Source.new(:authors => ["Han Solo", "James Kirk"], :publisher => "Random House",
       :city => "New York", :year => 1983, :title => "Memoirs from Space", :pages => [(45..49), 51])
-    assert_equal "James Kirk and Han Solo. <em>Memoirs from Space</em>. New York: Random House, 1983.", source.citation(:entry)
+    assert_kind_of Incite::Entry, source.citation(:entry)
   end
 
   test "returns true if every element in array is an array with at least one element or not nil" do
@@ -30,13 +30,6 @@ unit_tests do
     source = Incite::Source.new(:authors => [], :title => "Test Title")
     Incite::Source.publicize_methods do 
       assert !source.has_attributes?([:authors, :title])
-    end
-  end
-
-  test "raises error if source lacks required attributes" do
-    source = Incite::Source.new
-    assert_raises ArgumentError do
-      source.citation(:note)
     end
   end
 
