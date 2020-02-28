@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Ruby lib for formatting bibliographical data}
   s.description = %q{Incite is an academic citation library that lets you easily define objects for typical academic sources (eg. books, articles) which can be used to output formatted html for a variety of bibliographical formats (eg. Chicago Manual of Style, MLA). Right now only CMS is supported.  Incite is in alpha alpha stage. It's useless, don't install it.}
 
-  s.add_development_dependency 'rake', '~> 0.9.2.2'
+  s.add_development_dependency 'rake', '~> 13.0.1'
   s.add_development_dependency 'dust', '~> 0.1.6'
 
   s.files         = `git ls-files`.split("\n")
